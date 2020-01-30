@@ -1,60 +1,60 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <div class="App">
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+<!-- 認証されている場合 -->
+      <v-toolbar class="elevation-0" extended extension-height="" prominent color="blue lighten-3">
+            <div>
+              <h1 class="test">Shunya Yamamoto</h1>
+            </div>
+            <v-spacer></v-spacer>
+            
+            <v-toolbar-items>
+              <v-btn text to="/" color="#EEF9FF">HOME</v-btn>
+              <v-btn text to="/meetups" color="#EEF9FF">products</v-btn>
+            </v-toolbar-items>
+      </v-toolbar>
 
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+      <main>
+        <router-view></router-view>
+      </main>
+          
+    </div>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
   name: 'App',
 
-  components: {
-    HelloWorld,
+  data(){
+    return{
+      menuItems: [
+        {title: 'Home', link: '/'},
+        { icon: 'mdi-face', title: 'Meetups', link: '/meetups'},
+        { icon: 'mdi-account-box-multiple', title: 'create', link: '/create'},
+        {title: 'chat', link:'/chat'},
+        { icon: 'mdi-account-badge-horizontal-outline', title: 'Profile', link: '/profile'},
+        { icon: 'mdi-emoticon-neutral-outline', title: 'Sign up', link: '/signup'},
+        { icon: 'mdi-account-card-details-outline', title: 'Login', link: '/login'},
+      ],
+      homelink: '/'
+    }
   },
-
-  data: () => ({
-    //
-  }),
+  computed: {
+    
+  }
 };
 </script>
+
+<style>
+.test{
+  margin-top: 40px;
+  color: #EEF9FF
+}
+v-toolbar{
+  color: #AAD6EC
+}
+
+</style>
