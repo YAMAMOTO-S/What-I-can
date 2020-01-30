@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/components/Home'
+import seatapp from '@/components/SeatApp'
+import products from '@/components/Products'
 
 Vue.use(VueRouter)
 
@@ -10,6 +12,16 @@ const routes = [
     name: 'home',
     component: Home
   },
+  {
+    path: '/seatapp',
+    name: 'seatapp',
+    component: seatapp
+  },
+  {
+    path: '/products',
+    name: 'products',
+    component: products
+  }
   
 ]
 
