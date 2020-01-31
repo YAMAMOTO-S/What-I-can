@@ -24,7 +24,7 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
               <small>N/A</small>
             </li>
             <li>
-              <div class="seat selected"></div>
+              <div class="seat selected2"></div>
               <small>selected</small>
             </li>
             <li>
@@ -97,7 +97,9 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
               <div class="seat"></div>
             </div>
           </div>
+
           <br /><br />
+
           <v-alert dense type="info" color="#AAD6EC">
             <div class="endtext">
               <p>
@@ -119,21 +121,37 @@ export default {
     const container = document.querySelector(".moviecontainer");
     // eslint-disable-next-line no-unused-vars
     const seats = document.querySelectorAll(".row.seat:not(.occupied)");
-    // eslint-disable-next-line no-unused-vars
     const count = document.getElementById("count");
-    // eslint-disable-next-line no-unused-vars
     const total = document.getElementById("total");
     const movieSelect = document.getElementById("movie");
-    // eslint-disable-next-line no-unused-vars
-    const ticketPrice = +movieSelect.value;
+    let ticketPrice = +movieSelect.value;
 
+    // 合計金額を変更する
+    function updateSelectedCount() {
+      const selectedSeats = document.querySelectorAll(".row .seat.selected");
+      const selectedSeatsCount = selectedSeats.length;
+      // countとtotalにinnerTextを使い数値が変わるように
+      count.innerText = selectedSeatsCount;
+      total.innerText = selectedSeatsCount * ticketPrice;
+    }
+
+    // 映画を変更しても値段が反映されるようにする。
+    movieSelect.addEventListener("change", e => {
+      ticketPrice = e.target.value;
+      updateSelectedCount();
+    });
+
+    // seatのclickevent
     container.addEventListener("click", e => {
       // seatがクリックされた時のみ反応
       if (
         e.target.classList.contains("seat") &&
         !e.target.classList.contains("occupied")
       ) {
-        e.target.classList.toggle('selected');
+        // toggleを使ってselectedとseatを変えられるように
+        e.target.classList.toggle("selected");
+
+        updateSelectedCount();
       }
     });
   }
@@ -149,6 +167,17 @@ export default {
 .movie-container {
   margin: 30px;
 }
+.movie-container select {
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .seat {
   background-color: #5b5b5b;
   height: 15px;
@@ -158,6 +187,9 @@ export default {
   border-top-right-radius: 10px;
 }
 .seat.selected {
+  background-color: #aad6ec;
+}
+.seat.selected2 {
   background-color: #aad6ec;
 }
 .seat.occupied {
