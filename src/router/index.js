@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '@/components/Home'
 import seatapp from '@/components/SeatApp'
 import products from '@/components/Products'
+import video from '@/components/Video'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/products',
     name: 'products',
     component: products
+  },
+  {
+    path: '/video',
+    name: 'video',
+    component: video
   }
   
 ]
