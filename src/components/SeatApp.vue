@@ -1,22 +1,21 @@
+/* eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */ /*
+eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
 <template>
   <v-container fluid>
-
     <v-row align="center" justify="center">
       <v-col cols="12" md="10" lg="6">
-        
         <v-card class="cards">
           <div class="test2">
             <h1>Seat App</h1>
           </div>
           <div class="movie-container">
-            <label>
-              Please Pick a movie: 
-              <v-select
-            :items="items"
-            label="Standard"
-            dense
-            ></v-select>
-            </label>
+            <label>Pick a movie:</label>
+            <select id="movie">
+              <option value="10">Avengers: Endgame ($10)</option>
+              <option value="12">Joker ($12)</option>
+              <option value="8">Toy Story 4 ($8)</option>
+              <option value="9">The Lion King ($9)</option>
+            </select>
           </div>
 
           <ul class="showcase">
@@ -32,12 +31,11 @@
               <div class="seat occupied"></div>
               <small>Occupied</small>
             </li>
-            
           </ul>
 
           <div class="moviecontainer">
             <div class="screen"></div>
-            <br><br>
+            <br /><br />
             <div class="row">
               <div class="seat"></div>
               <div class="seat"></div>
@@ -99,101 +97,116 @@
               <div class="seat"></div>
             </div>
           </div>
-          <br><br>
+          <br /><br />
           <v-alert dense type="info" color="#AAD6EC">
             <div class="endtext">
               <p>
-              You have selected 
-              <span id="count"><strong>0</strong></span>  seats.
-              Price is $
-              <span id="total">0</span>
+                You have selected
+                <span id="count"><strong>0</strong></span> seats. Price is $
+                <span id="total">0</span>
               </p>
             </div>
           </v-alert>
-          
         </v-card>
       </v-col>
     </v-row>
-
   </v-container>
 </template>
 
 <script>
 export default {
-    data: () => ({
-      items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
-    }),
-}
+  mounted() {
+    const container = document.querySelector(".moviecontainer");
+    // eslint-disable-next-line no-unused-vars
+    const seats = document.querySelectorAll(".row.seat:not(.occupied)");
+    // eslint-disable-next-line no-unused-vars
+    const count = document.getElementById("count");
+    // eslint-disable-next-line no-unused-vars
+    const total = document.getElementById("total");
+    const movieSelect = document.getElementById("movie");
+    // eslint-disable-next-line no-unused-vars
+    const ticketPrice = +movieSelect.value;
+
+    container.addEventListener("click", e => {
+      // seatがクリックされた時のみ反応
+      if (
+        e.target.classList.contains("seat") &&
+        !e.target.classList.contains("occupied")
+      ) {
+        e.target.classList.toggle('selected');
+      }
+    });
+  }
+};
 </script>
 
 <style scoped>
-.test2 h1{
+.test2 h1 {
   margin: 0px;
   text-align: center;
-  color: #5B5B5B;
+  color: #5b5b5b;
 }
-.movie-container{
+.movie-container {
   margin: 30px;
 }
 .seat {
-  background-color: #5B5B5B;
+  background-color: #5b5b5b;
   height: 15px;
   width: 20px;
   margin: 3px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.seat.selected{
-  background-color: #AAD6EC;
+.seat.selected {
+  background-color: #aad6ec;
 }
-.seat.occupied{
-  background-color: #FC9D9D;
+.seat.occupied {
+  background-color: #fc9d9d;
 }
-.seat:nth-of-type(2){
+.seat:nth-of-type(2) {
   margin-right: 20px;
 }
-.seat:nth-last-of-type(2){
+.seat:nth-last-of-type(2) {
   margin-left: 20px;
 }
 /* occupedされていないseatはポインターにしてすこし拡大 */
-.seat:not(.occupied):hover{
+.seat:not(.occupied):hover {
   cursor: pointer;
   transform: scale(1.4);
 }
-.showcase .seat:not(.occupied):hover{
+.showcase .seat:not(.occupied):hover {
   cursor: default;
   transform: scale(1);
 }
-.row{
+.row {
   align-items: center;
   justify-content: center;
 }
-.showcase{
+.showcase {
   background-color: rgb(236, 236, 236);
-  color: #5B5B5B;
+  color: #5b5b5b;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px;
 }
-.showcase li{
+.showcase li {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px 30px;
 }
-.screen{
-  background: #5B5B5B;
+.screen {
+  background: #5b5b5b;
   height: 90px;
   width: 40%;
   margin: auto;
-  box-shadow: 0 10px 10px rgb(187, 187, 187)
+  box-shadow: 0 10px 10px rgb(187, 187, 187);
 }
-.endtext p{
+.endtext p {
   text-align: center;
 }
-.endtext{
+.endtext {
   margin: 10px;
-
 }
 </style>

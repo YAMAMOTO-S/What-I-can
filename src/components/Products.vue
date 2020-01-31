@@ -7,6 +7,7 @@
 
 <script>
 import SeatApp from '@/components/SeatApp'
+
 export default {
    components: {SeatApp}
 }
