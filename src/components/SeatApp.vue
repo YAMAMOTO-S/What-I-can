@@ -5,6 +5,7 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
     <v-row align="center" justify="center">
       <v-col cols="12" md="10" lg="6">
         <v-card class="cards">
+          <br>
           <div class="test2">
             <h1>Seat App</h1>
           </div>

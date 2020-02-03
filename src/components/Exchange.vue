@@ -3,11 +3,18 @@
     <v-row align="center" justify="center">
       <v-col cols="12" md="10" lg="6">
         <v-card class="card">
+          <br />
+          <div class="mainimg">
+            <v-img
+              src="https://images-fe.ssl-images-amazon.com/images/I/41XvwpEmyPL.png"
+            ></v-img>
+          </div>
           <div class="title">
             <h1>Exchange App</h1>
-            <p>Choose the currency and the amounts to get the exchange rate</p>
+            <p class="font-weight-light">Choose the currency and the amounts to get the exchange rate</p>
           </div>
-          
+
+          <br />
           <div class="exchangecon">
             <div class="currency">
               <select id="currency-one">
@@ -64,11 +71,13 @@
                 <option value="VND">VND</option>
                 <option value="ZAR">ZAR</option>
               </select>
-              <input type="number" id="amount-one" placeholder="0" calue="1">
+              <input type="number" id="amount-one" placeholder="0" calue="1" />
             </div>
 
             <div class="swap">
-              <v-btn class="btn" id="rate">swap</v-btn>
+              <v-btn class="btn" id="rate" depressed color="#AAD6EC" rounded
+                >swap</v-btn
+              >
               <div class="rate" id="rate"></div>
             </div>
 
@@ -127,10 +136,10 @@
                 <option value="VND">VND</option>
                 <option value="ZAR">ZAR</option>
               </select>
-              <input type="number" id="amount-two" placeholder="0" calue="1">
+              <input type="number" id="amount-two" placeholder="0" calue="1" />
             </div>
           </div>
-
+          <br />
         </v-card>
       </v-col>
     </v-row>
@@ -142,7 +151,11 @@ export default {};
 </script>
 
 <style scoped>
-.card{
+.mainimg {
+  max-width: 150px;
+  margin: 10px auto;
+}
+.card {
   text-align: center;
 }
 .title h1 {
@@ -154,9 +167,20 @@ export default {};
   text-align: center;
   color: #5b5b5b;
 }
-.exchangecon{
+.exchangecon {
   align-items: center;
   justify-content: center;
 }
-
+.btn{
+  margin: 10px;
+  max-height: 30px;
+  color: rgb(255, 255, 255);
+}
+.currency input{
+  border-bottom: 2px solid  rgb(236, 236, 236);
+  margin: 10px;
+}
+select:focus, input:focus{
+  outline: 0;
+}
 </style>
