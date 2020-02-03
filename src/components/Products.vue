@@ -2,15 +2,15 @@
    <v-container>
       <h1>This is Product page.</h1>
       <SeatApp/>
-      <VideoApp/>
+      <Exchange/>
    </v-container>
 </template>
 
 <script>
 import SeatApp from '@/components/SeatApp'
-import VideoApp from '@/components/Video'
+import Exchange from '@/components/Exchange'
 
 export default {
-   components: {SeatApp, VideoApp}
+   components: {SeatApp, Exchange}
 }
 </script>

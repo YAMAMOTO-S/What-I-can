@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '@/components/Home'
 import seatapp from '@/components/SeatApp'
 import products from '@/components/Products'
-import video from '@/components/Video'
+import exchange from '@/components/Exchange'
 
 Vue.use(VueRouter)
 
@@ -24,9 +24,9 @@ const routes = [
     component: products
   },
   {
-    path: '/video',
-    name: 'video',
-    component: video
+    path: '/exchange',
+    name: 'exchange',
+    component: exchange
   }
   
 ]
