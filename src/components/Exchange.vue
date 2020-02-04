@@ -11,10 +11,13 @@
           </div>
           <div class="title">
             <h1>Exchange App</h1>
-            <p class="font-weight-light">Choose the currency and the amounts to get the exchange rate</p>
+            <p class="font-weight-light">
+              Choose the currency and the amounts to get the exchange rate
+            </p>
           </div>
 
           <br />
+<!-- 換金コンポーネント           -->
           <div class="exchangecon">
             <div class="currency">
               <select id="currency-one">
@@ -75,7 +78,7 @@
             </div>
 
             <div class="swap">
-              <v-btn class="btn" id="rate" depressed color="#AAD6EC" rounded
+              <v-btn class="btn" id="swap" depressed color="#AAD6EC" rounded
                 >swap</v-btn
               >
               <div class="rate" id="rate"></div>
@@ -147,7 +150,40 @@
 </template>
 
 <script>
-export default {};
+// eslint-disable-next-line no-unused-vars
+import axios from "axios";
+
+export default {
+  mounted() {
+    const currency_one = document.getElementById('currency-one');
+    const amount_one = document.getElementById('amount-one');
+    const currency_two = document.getElementById('currency-two');
+    const amount_two = document.getElementById('amount-two');
+    
+    // const rateEl = document.getElementById('rate');
+    // const swap = document.getElementById('swap');
+
+
+    // exchange rate を取得してDOMの更新を行う
+    function calculate(){
+      const currency_oneV = currency_one.value;
+      // const currency_twoV = currency_two.value;
+      
+      fetch(`https://api.exchangerate-api.com/v4/latest/${currency_oneV}`)
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+        })
+    }
+    // event listeners
+    currency_one.addEventListener('change', calculate);
+    amount_one.addEventListener('input', calculate);
+    currency_two.addEventListener('change', calculate);
+    amount_two.addEventListener('change', calculate);
+
+    calculate();
+  }
+};
 </script>
 
 <style scoped>
@@ -171,16 +207,17 @@ export default {};
   align-items: center;
   justify-content: center;
 }
-.btn{
+.btn {
   margin: 10px;
   max-height: 30px;
   color: rgb(255, 255, 255);
 }
-.currency input{
-  border-bottom: 2px solid  rgb(236, 236, 236);
+.currency input {
+  border-bottom: 2px solid rgb(236, 236, 236);
   margin: 10px;
 }
-select:focus, input:focus{
+select:focus,
+input:focus {
   outline: 0;
 }
 </style>
