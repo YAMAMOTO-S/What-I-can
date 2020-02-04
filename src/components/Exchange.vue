@@ -17,7 +17,7 @@
           </div>
 
           <br />
-<!-- 換金コンポーネント           -->
+          <!-- 換金コンポーネント           -->
           <div class="exchangecon">
             <div class="currency">
               <select id="currency-one">
@@ -81,7 +81,7 @@
               <v-btn class="btn" id="swap" depressed color="#AAD6EC" rounded
                 >swap</v-btn
               >
-              <div class="rate" id="rate"></div>
+              
             </div>
 
             <div class="currency">
@@ -142,7 +142,12 @@
               <input type="number" id="amount-two" placeholder="0" calue="1" />
             </div>
           </div>
-          <br />
+          <br /><br>
+          
+<!-- 現在のレート表示           -->
+          <v-alert dense type="info" color="#AAD6EC">
+            <div class="rate" id="rate"></div>
+          </v-alert>
         </v-card>
       </v-col>
     </v-row>
@@ -155,21 +160,23 @@ import axios from "axios";
 
 export default {
   mounted() {
-    const currency_one = document.getElementById('currency-one');
-    const amount_one = document.getElementById('amount-one');
-    const currency_two = document.getElementById('currency-two');
-    const amount_two = document.getElementById('amount-two');
-    
-    const rateEl = document.getElementById('rate');
-    const swap = document.getElementById('swap');
+    const currency_one = document.getElementById("currency-one");
+    const amount_one = document.getElementById("amount-one");
+    const currency_two = document.getElementById("currency-two");
+    const amount_two = document.getElementById("amount-two");
+
+    const rateEl = document.getElementById("rate");
+    const swap = document.getElementById("swap");
 
 
-    // exchange rate を取得してDOMの更新を行う
-    function calculate(){
+
+// exchange rate を取得してDOMの更新を行う
+    function calculate() {
+      // 通貨を取得
       const currency_oneV = currency_one.value;
       const currency_twoV = currency_two.value;
 
-// ExchangeAPIを使用
+      // ExchangeAPIを使用してoneの通貨を取ってくる
       fetch(`https://api.exchangerate-api.com/v4/latest/${currency_oneV}`)
         .then(res => res.json())
         .then(data => {
@@ -177,23 +184,26 @@ export default {
           const rate = data.rates[currency_twoV];
           rateEl.innerText = `1 ${currency_oneV} = ${rate} ${currency_twoV}`;
 
-// amount_twoの値はamount_one × rate
+          // amount_twoの値はamount_one × rate
           amount_two.value = (amount_one.value * rate).toFixed(2);
-        })
+        });
     }
-    // event listeners
-    currency_one.addEventListener('change', calculate);
-    amount_one.addEventListener('input', calculate);
-    currency_two.addEventListener('change', calculate);
-    amount_two.addEventListener('change', calculate);
-    swap.addEventListener('click', () => {
+
+
+// event listeners
+    currency_one.addEventListener("change", calculate);
+    amount_one.addEventListener("input", calculate);
+    currency_two.addEventListener("change", calculate);
+    amount_two.addEventListener("change", calculate);
+
+    swap.addEventListener("click", () => {
       const temp = currency_one.value;
 
       currency_one.value = currency_two.value;
       currency_two.value = temp;
-      
+
       calculate();
-    })
+    });
 
     calculate();
   }
@@ -233,5 +243,8 @@ export default {
 select:focus,
 input:focus {
   outline: 0;
+}
+.rate{
+  margin: 10px;
 }
 </style>
