@@ -160,19 +160,25 @@ export default {
     const currency_two = document.getElementById('currency-two');
     const amount_two = document.getElementById('amount-two');
     
-    // const rateEl = document.getElementById('rate');
-    // const swap = document.getElementById('swap');
+    const rateEl = document.getElementById('rate');
+    const swap = document.getElementById('swap');
 
 
     // exchange rate を取得してDOMの更新を行う
     function calculate(){
       const currency_oneV = currency_one.value;
-      // const currency_twoV = currency_two.value;
-      
+      const currency_twoV = currency_two.value;
+
+// ExchangeAPIを使用
       fetch(`https://api.exchangerate-api.com/v4/latest/${currency_oneV}`)
         .then(res => res.json())
         .then(data => {
-          console.log(data);
+          // currencyTwoのレートを持ってくる
+          const rate = data.rates[currency_twoV];
+          rateEl.innerText = `1 ${currency_oneV} = ${rate} ${currency_twoV}`;
+
+// amount_twoの値はamount_one × rate
+          amount_two.value = (amount_one.value * rate).toFixed(2);
         })
     }
     // event listeners
@@ -180,6 +186,14 @@ export default {
     amount_one.addEventListener('input', calculate);
     currency_two.addEventListener('change', calculate);
     amount_two.addEventListener('change', calculate);
+    swap.addEventListener('click', () => {
+      const temp = currency_one.value;
+
+      currency_one.value = currency_two.value;
+      currency_two.value = temp;
+      
+      calculate();
+    })
 
     calculate();
   }
