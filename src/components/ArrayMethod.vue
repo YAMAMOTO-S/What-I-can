@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
-      <v-col cols="12" md="10" lg="6">
+      <v-col cols="12" md="10" lg="8">
         <v-card class="card">
           <br />
           <div class="mainimg">
@@ -17,41 +17,46 @@
               for reviewing the array methods by using API.
             </p>
           </div>
-          <br>
-          
-<!-- メイン部分           -->
+          <br />
+
+          <!-- メイン部分           -->
           <div class="d-flex flex-row" cols="12">
             <v-col cols="6" class="mainbtn">
               <div>
-                <v-btn id="add-user" depressed small class="btns">Add User</v-btn>
+                <v-btn id="add-user" depressed small class="btns"
+                  >Add User</v-btn
+                >
               </div>
               <div>
-                <v-btn id="double" depressed small class="btns">Double money</v-btn>
+                <v-btn id="double" depressed small class="btns"
+                  >Double money</v-btn
+                >
               </div>
               <div>
-                <v-btn id="millionaires" depressed small class="btns">Millionaires</v-btn>
+                <v-btn id="millionaires" depressed small class="btns"
+                  >Millionaires</v-btn
+                >
               </div>
               <div>
-                <v-btn id="sort" depressed small class="btns">Sort by Richest</v-btn>
+                <v-btn id="sort" depressed small class="btns"
+                  >Sort by Richest</v-btn
+                >
               </div>
               <div>
-                <v-btn id="wealth" depressed small class="btns">entire wealth</v-btn>
+                <v-btn id="wealth" depressed small class="btns"
+                  >entire wealth</v-btn
+                >
               </div>
             </v-col>
 
             <v-col cols="6">
-            <div id="main"  class="mainp">
-              <h2 class="font-weight-light">Person</h2>
-              <h2 class="font-weight-light">Wealth</h2>
-            </div>
+              <div id="main" class="mainp">
+                <h2 class="font-weight-light">Person</h2>
+                <h2 class="font-weight-light">Wealth</h2>
+              </div>
             </v-col>
-            
           </div>
-          <br>
-          
-
-          
-
+          <br />
         </v-card>
       </v-col>
     </v-row>
@@ -82,10 +87,9 @@ export default {};
 /* .mainbtn{
   border-right: 1px solid #1111;
 } */
-.btns{
-  width: 50%;
+.btns {
+  width: 45%;
   margin: 5px;
-  
 }
 .mainp {
   display: flex;
@@ -93,5 +97,8 @@ export default {};
   margin-right: 20px;
   border-bottom: 2px solid #1111;
   padding: 0 20px;
+}
+.btns {
+  justify-content: left;
 }
 </style>
