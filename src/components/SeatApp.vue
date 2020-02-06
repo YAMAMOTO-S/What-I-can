@@ -3,7 +3,7 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="12" md="12" lg="12">
         <v-card class="cards">
           <br>
           <div class="test2">

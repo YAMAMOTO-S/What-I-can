@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
-      <v-col cols="12" md="10" lg="8">
+      <v-col cols="12" md="12" lg="12">
         <v-card class="card">
           <br />
           <div class="mainimg">
@@ -143,7 +143,7 @@
               <input type="number" id="amount-two" placeholder="0" calue="1" />
             </div>
           </div>
-          <br /><br>
+          <br /><br><br>
           
 <!-- 現在のレート表示           -->
           <v-alert dense type="info" color="#AAD6EC">
