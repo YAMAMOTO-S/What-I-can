@@ -8,6 +8,7 @@
             <v-img
               src="https://images-fe.ssl-images-amazon.com/images/I/41XvwpEmyPL.png"
             ></v-img>
+            <br>
           </div>
           <div class="title">
             <h1>Exchange App</h1>
