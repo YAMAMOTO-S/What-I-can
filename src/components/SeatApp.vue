@@ -8,6 +8,9 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
           <br>
           <div class="test2">
             <h1>Seat App</h1>
+            <p class="font-weight-light">
+              Choose the movie and check the price :)
+            </p>
           </div>
           <div class="movie-container">
             <label>Pick a movie:</label>
@@ -161,7 +164,11 @@ export default {
 
 <style scoped>
 .test2 h1 {
-  margin: 0px;
+  text-align: center;
+  color: #5b5b5b;
+}
+.test2 p {
+  margin: 20px;
   text-align: center;
   color: #5b5b5b;
 }

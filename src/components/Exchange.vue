@@ -185,8 +185,11 @@ export default {
           rateEl.innerText = `1 ${currency_oneV} = ${rate} ${currency_twoV}`;
 
           // amount_twoの値はamount_one × rate
+          // eslint-disable-next-line no-irregular-whitespace
+        // amount1に数字を入れてAPIで取ってきたrateと掛ける。　
           amount_two.value = (amount_one.value * rate).toFixed(2);
         });
+        
     }
 
 
