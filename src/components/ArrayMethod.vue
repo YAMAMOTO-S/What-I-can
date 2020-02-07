@@ -21,7 +21,7 @@
 
           <!-- メイン部分           -->
           <div class="d-flex flex-row" cols="12">
-            <v-col cols="6" class="mainbtn">
+            <v-col cols="4" class="mainbtn">
               <div>
                 <v-btn id="add-user" depressed small class="btns"
                   >Add User</v-btn
@@ -49,11 +49,10 @@
               </div>
             </v-col>
 
-            <v-col cols="6">
-              <div id="main" class="mainp">
+            <v-col cols="8">
+              <main id="main">
                 <h2 class="font-weight-light">Person</h2>
-                <h2 class="font-weight-light">Wealth</h2>
-              </div>
+              </main>
             </v-col>
           </div>
           <br />
@@ -64,7 +63,57 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    const main = document.getElementById("main");
+    // const addBtn = document.getElementById('add-user');
+    // const dobleBtn = document.getElementById('double');
+    // const millionBtn = document.getElementById('millionaires');
+    // const sortBtn = document.getElementById('sort');
+    // const wealthBtn = document.getElementById('wealth');
+
+    let data = [];
+
+    getUser();
+    getUser();
+    getUser();
+
+    // ランダムUserとお金を追加
+    async function getUser() {
+      const res = await fetch("https://randomuser.me/api");
+      const data = await res.json();
+
+      // result0に全てのUserデータが入っているから0
+      // newUserで名前と金を持ったUserを作る
+      const user = data.results[0];
+      const newUser = {
+        name: `${user.name.first} ${user.name.last}`,
+        money: Math.floor(Math.random() * 100000)
+      };
+
+      addData(newUser);
+    }
+    // new obj をdataに追加する
+    function addData(obj) {
+      data.push(obj);
+      updateDOM();
+    }
+
+    function updateDOM(providedData = data) {
+      // innerHTMLで文字を変更する
+      main.innerHTML = '<h2 class="font-weight-light">Person</h2>';
+      // providedDataをitemに小分けする
+      // createElementでdivを作成してその中に情報を入れていく
+      providedData.forEach(item => {
+        const element = document.createElement("div");
+        element.classList.add("person");
+        // eslint-disable-next-line no-irregular-whitespace
+        element.innerHTML = `<strong>${item.name}</strong>　　　$${item.money}`;
+        main.appendChild(element);
+      });
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -88,17 +137,23 @@ export default {};
   border-right: 1px solid #1111;
 } */
 .btns {
-  width: 45%;
+  width: 60%;
   margin: 5px;
 }
-.mainp {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 20px;
-  border-bottom: 2px solid #1111;
-  padding: 0 20px;
-}
+
 .btns {
   justify-content: left;
+}
+main {
+  flex: 1;
+}
+
+h2 {
+  border-bottom: 1px solid #111;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  margin: 0 0 20px;
 }
 </style>
