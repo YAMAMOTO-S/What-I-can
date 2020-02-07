@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
-      <v-col cols="12" md="10" lg="10" xl="10">
+      <v-col cols="12" md="12" lg="12" xl="12">
         <v-card class="card">
           <br />
           <div class="mainimg">
@@ -17,7 +17,7 @@
             </p>
           </div>
 
-          <br />
+          <br /><br>
           <!-- 換金コンポーネント           -->
           <div class="exchangecon">
             <div class="currency">
@@ -217,7 +217,7 @@ export default {
 <style scoped>
 .mainimg {
   max-width: 150px;
-  margin: 10px auto;
+  margin: 12px auto;
 }
 .card {
   text-align: center;
@@ -236,19 +236,19 @@ export default {
   justify-content: center;
 }
 .btn {
-  margin: 10px;
+  margin: 12px;
   max-height: 30px;
   color: rgb(255, 255, 255);
 }
 .currency input {
   border-bottom: 2px solid rgb(236, 236, 236);
-  margin: 10px;
+  margin: 12px;
 }
 select:focus,
 input:focus {
   outline: 0;
 }
 .rate{
-  margin: 10px;
+  margin: 12px;
 }
 </style>

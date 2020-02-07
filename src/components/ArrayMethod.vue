@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
-      <v-col cols="12" md="10" lg="6">
+      <v-col ols="12" md="12" lg="12" xl="12">
         <v-card class="card">
           <br />
           <div class="mainimg">
@@ -14,7 +14,7 @@
           <div class="title">
             <h1>Array Methods</h1>
             <p class="font-weight-light">
-              for reviewing the array methods by using API.
+              for review a JS methods by using RandomUser API.
             </p>
           </div>
           <br />
@@ -66,7 +66,7 @@
 export default {
   mounted() {
     const main = document.getElementById("main");
-    // const addBtn = document.getElementById('add-user');
+    const addBtn = document.getElementById('add-user');
     // const dobleBtn = document.getElementById('double');
     // const millionBtn = document.getElementById('millionaires');
     // const sortBtn = document.getElementById('sort');
@@ -90,9 +90,9 @@ export default {
         name: `${user.name.first} ${user.name.last}`,
         money: Math.floor(Math.random() * 100000)
       };
-
       addData(newUser);
     }
+    
     // new obj をdataに追加する
     function addData(obj) {
       data.push(obj);
@@ -101,7 +101,7 @@ export default {
 
     function updateDOM(providedData = data) {
       // innerHTMLで文字を変更する
-      main.innerHTML = '<h2 class="font-weight-light">Person</h2>';
+      main.innerHTML = '<h2 class="font-weight-light">Person</h2><br>';
       // providedDataをitemに小分けする
       // createElementでdivを作成してその中に情報を入れていく
       providedData.forEach(item => {
@@ -112,6 +112,9 @@ export default {
         main.appendChild(element);
       });
     }
+
+    // addEventListener
+    addBtn.addEventListener('click', getUser);
   }
 };
 </script>
@@ -137,7 +140,7 @@ export default {
   border-right: 1px solid #1111;
 } */
 .btns {
-  width: 60%;
+  width: 80%;
   margin: 5px;
 }
 

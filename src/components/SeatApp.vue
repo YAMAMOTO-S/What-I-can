@@ -3,7 +3,7 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
-      <v-col cols="12" md="10" lg="10" xl="10">
+      <v-col cols="12" md="12" lg="12" xl="12">
         <v-card class="cards">
           <br>
           <div class="test2">
@@ -15,7 +15,7 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
           <div class="movie-container">
             <label>Pick a movie:</label>
             <select id="movie">
-              <option value="10">Avengers: Endgame ($10)</option>
+              <option value="12">Avengers: Endgame ($12)</option>
               <option value="12">Joker ($12)</option>
               <option value="8">Toy Story 4 ($8)</option>
               <option value="9">The Lion King ($9)</option>
@@ -179,7 +179,7 @@ export default {
   background-color: rgb(236, 236, 236);
   border-radius: 5px;
   font-size: 14px;
-  margin-left: 10px;
+  margin-left: 12px;
   padding: 5px 15px 5px 15px;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -191,8 +191,8 @@ export default {
   height: 15px;
   width: 20px;
   margin: 3px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .seat.selected {
   background-color: #aad6ec;
@@ -234,19 +234,19 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px 30px;
+  margin: 12px 30px;
 }
 .screen {
   background: #5b5b5b;
   height: 90px;
   width: 40%;
   margin: auto;
-  box-shadow: 0 10px 10px rgb(187, 187, 187);
+  box-shadow: 0 12px 12px rgb(187, 187, 187);
 }
 .endtext p {
   text-align: center;
 }
 .endtext {
-  margin: 10px;
+  margin: 12px;
 }
 </style>
