@@ -66,8 +66,8 @@
 export default {
   mounted() {
     const main = document.getElementById("main");
-    const addBtn = document.getElementById('add-user');
-    // const dobleBtn = document.getElementById('double');
+    const addBtn = document.getElementById("add-user");
+    const dobleBtn = document.getElementById("double");
     // const millionBtn = document.getElementById('millionaires');
     // const sortBtn = document.getElementById('sort');
     // const wealthBtn = document.getElementById('wealth');
@@ -92,7 +92,7 @@ export default {
       };
       addData(newUser);
     }
-    
+
     // new obj をdataに追加する
     function addData(obj) {
       data.push(obj);
@@ -113,8 +113,17 @@ export default {
       });
     }
 
+    function doubleMoney() {
+      data = data.map(user => {
+        return { ...user, money: user.money * 2 };
+      });
+
+      updateDOM();
+    }
+
     // addEventListener
-    addBtn.addEventListener('click', getUser);
+    addBtn.addEventListener("click", getUser);
+    dobleBtn.addEventListener("click", doubleMoney);
   }
 };
 </script>
