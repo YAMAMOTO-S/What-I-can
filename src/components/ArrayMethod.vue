@@ -68,9 +68,9 @@ export default {
     const main = document.getElementById("main");
     const addBtn = document.getElementById("add-user");
     const dobleBtn = document.getElementById("double");
-    // const millionBtn = document.getElementById('millionaires');
-    const sortBtn = document.getElementById('sort');
-    // const wealthBtn = document.getElementById('wealth');
+    const millionBtn = document.getElementById("millionaires");
+    const sortBtn = document.getElementById("sort");
+    const wealthBtn = document.getElementById("wealth");
 
     let data = [];
 
@@ -101,7 +101,7 @@ export default {
 
     function updateDOM(providedData = data) {
       // innerHTMLで文字を変更する
-      main.innerHTML = '<h2 class="font-weight-light">Person</h2><br>';
+      main.innerHTML = `<h2 class="font-weight-light">Person</h2>`;
       // providedDataをitemに小分けする
       // createElementでdivを作成してその中に情報を入れていく
       providedData.forEach(item => {
@@ -113,26 +113,39 @@ export default {
       });
     }
 
-// 所持金を二倍 Map Method 
+    // 所持金を二倍 Map Method
     function doubleMoney() {
       data = data.map(user => {
         return { ...user, money: user.money * 2 };
       });
-
       updateDOM();
     }
-// 金持ち順にソート機能
+    // 金持ち順にソート機能
     function sortByRichest() {
-    data.sort((a, b) => b.money - a.money);
+      data.sort((a, b) => b.money - a.money);
+      updateDOM();
+    }
+    // ミリオネアだけを表示Filter Method
+    function showMil() {
+      data = data.filter(user => user.money > 1000000);
+      updateDOM();
+    }
+    // 合計金額reduce method
+    function AllWealth() {
+      const wealth = data.reduce((acc, user) => (acc += user.money), 0);
+      const wealthEl = document.createElement("div");
 
-    updateDOM();
-  }
+      wealthEl.innerHTML = 
+        `<h2 class="font-weight-light">Total Wealth: ${wealth}</h2>`;
+      main.appendChild(wealthEl);
+    }
 
     // addEventListener
     addBtn.addEventListener("click", getUser);
     dobleBtn.addEventListener("click", doubleMoney);
     sortBtn.addEventListener("click", sortByRichest);
-    
+    millionBtn.addEventListener("click", showMil);
+    wealthBtn.addEventListener("click", AllWealth);
   }
 };
 </script>
