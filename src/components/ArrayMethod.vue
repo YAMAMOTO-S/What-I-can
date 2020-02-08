@@ -14,7 +14,7 @@
           <div class="title">
             <h1>Array Methods</h1>
             <p class="font-weight-light">
-              for review a JS methods by using RandomUser API.
+              for review JS methods by using RandomUser API.
             </p>
           </div>
           <br />
@@ -69,7 +69,7 @@ export default {
     const addBtn = document.getElementById("add-user");
     const dobleBtn = document.getElementById("double");
     // const millionBtn = document.getElementById('millionaires');
-    // const sortBtn = document.getElementById('sort');
+    const sortBtn = document.getElementById('sort');
     // const wealthBtn = document.getElementById('wealth');
 
     let data = [];
@@ -113,6 +113,7 @@ export default {
       });
     }
 
+// 所持金を二倍 Map Method 
     function doubleMoney() {
       data = data.map(user => {
         return { ...user, money: user.money * 2 };
@@ -120,10 +121,18 @@ export default {
 
       updateDOM();
     }
+// 金持ち順にソート機能
+    function sortByRichest() {
+    data.sort((a, b) => b.money - a.money);
+
+    updateDOM();
+  }
 
     // addEventListener
     addBtn.addEventListener("click", getUser);
     dobleBtn.addEventListener("click", doubleMoney);
+    sortBtn.addEventListener("click", sortByRichest);
+    
   }
 };
 </script>
