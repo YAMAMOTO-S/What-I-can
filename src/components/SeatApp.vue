@@ -4,7 +4,7 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
   <v-container fluid>
     <v-row align="center" justify="center">
       <v-col cols="12" md="12" lg="12" xl="12">
-        <v-card class="cards">
+        <v-card class="cards" height="700px">
           <br>
           <div class="test2">
             <h1>Seat App</h1>
@@ -102,7 +102,7 @@ eslint-disable no-unused-vars */ /* eslint-disable no-unused-vars */
             </div>
           </div>
 
-          <br /><br />
+          <br /><br><br>
 
           <v-alert dense type="info" color="#AAD6EC">
             <div class="endtext">

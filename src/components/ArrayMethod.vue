@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row align="center" justify="center">
       <v-col cols="12" md="12" lg="12" xl="12">
-        <v-card class="card">
+        <v-card class="card" height='700px'>
           <br />
           <div class="mainimg">
             <v-img
