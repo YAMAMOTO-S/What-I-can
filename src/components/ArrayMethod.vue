@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
-      <v-col ols="12" md="12" lg="12" xl="12">
+      <v-col cols="12" md="12" lg="12" xl="12">
         <v-card class="card">
           <br />
           <div class="mainimg">

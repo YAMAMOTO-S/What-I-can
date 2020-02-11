@@ -5,6 +5,7 @@ import seatapp from '@/components/SeatApp'
 import products from '@/components/Products'
 import exchange from '@/components/Exchange'
 import ArrayMethods from '@/components/ArrayMethod'
+import Meal from '@/components/Meal'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/arraymethods',
     name: 'arraymethods',
     component: ArrayMethods
+  },
+  {
+    path: '/meal',
+    name: 'meal',
+    component: Meal
   }
   
 ]
