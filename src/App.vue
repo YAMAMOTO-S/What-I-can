@@ -4,8 +4,6 @@
       <!-- 認証されている場合 -->
       <v-toolbar
         class="elevation-0"
-        extended
-        extension-height=""
         prominent
         color="#AAD6EC"
       >

@@ -1,14 +1,13 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <h1>This is Product page.</h1>
-    <v-row>
-      <!-- <v-col cols="12" class="d-flex flex-row" align="center" justify="center"> -->
+    <v-row align="center" justify="center">
+      <v-col cols="10" class="d-lg-flex" align="center" justify="center">
       <v-col
         cols="4"
-        md="6"
+        md="12"
         lg="4"
         xl="4"
-        class="d-flex flex-row"
         align="center"
         justify="center"
       >
@@ -16,10 +15,9 @@
       </v-col>
       <v-col
         cols="4"
-        md="6"
+        md="12"
         lg="4"
-        xl="4"
-        class="d-flex flex-row"
+        xl="4"        
         align="center"
         justify="center"
       >
@@ -27,14 +25,14 @@
       </v-col>
       <v-col
         cols="4"
-        md="6"
+        md="12"
         lg="4"
-        xl="4"
-        class="d-flex flex-row"
+        xl="4"        
         align="center"
         justify="center"
       >
         <ArrayMethods />
+      </v-col>
       </v-col>
     </v-row>
 

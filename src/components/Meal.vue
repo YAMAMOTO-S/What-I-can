@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
@@ -71,10 +72,11 @@ export default {
               mealsEl.innerHTML = data.meals
                 .map(
                   meal => `
-                <div class="meal" style="justify-content: center; text-align: center;">
+                <div class="meal" 
+                  style="justify-content: center; text-align: center; cursor: pointer;">
                   <img src="${meal.strMealThumb}" alt="${meal.strMeal}" 
-                    style="height: 300px; width:300px; margin: 10px; />
-                  <div class="meal-info" data-mealID = "${meal.idMeal}">
+                    style="height: 200px; width:200px; margin: 10px; />
+                  <div class="mealInfo" data-mealID="${meal.idMeal}">
                     <h3 style="color: #5b5b5b; justify-content: center; text-align: center;">${meal.strMeal}</h3>
                   </div>
                 </div>
@@ -92,6 +94,20 @@ export default {
 
     // イベントリスナー
     submit.addEventListener("submit", searchMeal);
+    mealsEl.addEventListener('click', e => {
+      const mealInfo = e.path.find(item => {
+        if(item.classList) {
+          return item.classList.contains('mealInfo');
+        } else {
+          return false;
+        }
+      });
+      console.log(mealInfo);
+    })
+    
+
+
+
   }
 };
 </script>
@@ -127,8 +143,7 @@ export default {
 }
 .meals {
   display: grid;
-  grid-template-columns: repeat(3, 3fr); 
-
+  grid-template-columns: repeat(4, 5fr);
+  margin-top: 50px;
 }
-
 </style>
