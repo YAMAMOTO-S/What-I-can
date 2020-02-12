@@ -43,8 +43,8 @@ export default {
   mounted() {
     const search = document.getElementById("search"),
       submit = document.getElementById("submit"),
-      mealsEl = document.getElementById('meals'),
-      result = document.getElementById('result'),
+      mealsEl = document.getElementById("meals"),
+      result = document.getElementById("result"),
       single_meal = document.getElementById("single-meal");
 
     // searchMeal APIから取ってくる
@@ -57,7 +57,7 @@ export default {
       const term = search.value;
 
       // termに入った名前を検索と空白かどうか確認
-      if(term.trim()){
+      if (term.trim()) {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
           .then(res => res.json())
           .then(data => {
@@ -65,26 +65,29 @@ export default {
             result.innerHTML = `<h2>Search results for ${term}:</h2>`;
 
             // 空白なら注意を表示なければMAPを使って結果を表示
-            if(data.meals == null){
+            if (data.meals == null) {
               result.innerHTML = `<p>There are no data. Please try again :)</p>`;
             } else {
-              mealsEl.innerHTML = data.meals.map(meal => `
-                <div class="meal">
-                  <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+              mealsEl.innerHTML = data.meals
+                .map(
+                  meal => `
+                <div class="meal" style="justify-content: center; text-align: center;">
+                  <img src="${meal.strMealThumb}" alt="${meal.strMeal}" 
+                    style="height: 300px; width:300px; margin: 10px; />
                   <div class="meal-info" data-mealID = "${meal.idMeal}">
-                    <h3>${meal.strMeal}</h3>
+                    <h3 style="color: #5b5b5b; justify-content: center; text-align: center;">${meal.strMeal}</h3>
                   </div>
                 </div>
-              `)
-              .join('');
+              `
+                )
+                .join("");
             }
           });
-          // search を綺麗にする
-          search.value = '';
+        // search を綺麗にする
+        search.value = "";
       } else {
-        alert('Please enter some words.')
+        alert("Please enter some words.");
       }
-
     }
 
     // イベントリスナー
@@ -124,11 +127,8 @@ export default {
 }
 .meals {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 20px;
-}
-.meals img {
-  max-width: 10px;
+  grid-template-columns: repeat(3, 3fr); 
+
 }
 
 </style>
