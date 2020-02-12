@@ -56,3 +56,7 @@ export default {
   components: { SeatApp, Exchange, ArrayMethods, Meal }
 };
 </script>
+
+<style scoped>
+
+</style>

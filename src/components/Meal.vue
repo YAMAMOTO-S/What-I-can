@@ -29,7 +29,7 @@
             </form>
           </div>
 
-          <div class="result"></div>
+          <div id="result" class="resulttitle"></div>
           <div id="meals" class="meals"></div>
           <div id="single-meal"></div>
         </v-card>
@@ -43,8 +43,8 @@ export default {
   mounted() {
     const search = document.getElementById("search"),
       submit = document.getElementById("submit"),
-      // mealsEl = document.getElementById('meals'),
-      // result = document.getElementById('result'),
+      mealsEl = document.getElementById('meals'),
+      result = document.getElementById('result'),
       single_meal = document.getElementById("single-meal");
 
     // searchMeal APIから取ってくる
@@ -61,8 +61,26 @@ export default {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
           .then(res => res.json())
           .then(data => {
-            console.log(data)
-          })
+            console.log(data);
+            result.innerHTML = `<h2>Search results for ${term}:</h2>`;
+
+            // 空白なら注意を表示なければMAPを使って結果を表示
+            if(data.meals == null){
+              result.innerHTML = `<p>There are no data. Please try again :)</p>`;
+            } else {
+              mealsEl.innerHTML = data.meals.map(meal => `
+                <div class="meal">
+                  <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                  <div class="meal-info" data-mealID = "${meal.idMeal}">
+                    <h3>${meal.strMeal}</h3>
+                  </div>
+                </div>
+              `)
+              .join('');
+            }
+          });
+          // search を綺麗にする
+          search.value = '';
       } else {
         alert('Please enter some words.')
       }
@@ -98,4 +116,19 @@ export default {
   margin-top: 10px;
   margin-left: 10px;
 }
+.resulttitle {
+  text-align: center;
+  justify-content: center;
+  margin: 10px auto;
+  color: #5b5b5b;
+}
+.meals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 20px;
+}
+.meals img {
+  max-width: 10px;
+}
+
 </style>
