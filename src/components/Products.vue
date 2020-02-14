@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <h1>This is Product page.</h1>
-    <v-row align="center" justify="center">
-      <v-col cols="10" class="d-lg-flex" align="center" justify="center">
+    <v-row align="center" justify="center" class="animated fadeIn">
+      <v-col cols="10" class="d-lg-flex " align="center" justify="center"
+        >
       <v-col
         cols="4"
         md="12"
@@ -36,8 +36,8 @@
       </v-col>
     </v-row>
 
-    <v-row>
-      <v-col cols="12" md="10" lg="12" xl="12" align="center" justify="center">
+    <v-row  align="center" justify="center" class="animated fadeIn"> 
+      <v-col cols="12" md="10" lg="12" xl="12">
         <Meal />
       </v-col>
     </v-row>
