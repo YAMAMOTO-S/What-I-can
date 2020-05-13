@@ -1,22 +1,13 @@
 <template>
   <v-app>
     <div class="App">
-      <!-- 認証されている場合 -->
-      <v-toolbar
-        class="elevation-0"
-        prominent
-        color="#AAD6EC"
-      >
-        <div>
-          <h1 class="test">Shunya Yamamoto</h1>
-        </div>
-        <v-spacer></v-spacer>
-
-        <v-toolbar-items>
-          <v-btn text to="/" color="#EEF9FF">HOME</v-btn>
-          <v-btn text to="/products" color="#EEF9FF">products</v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
+      <div class="header">
+        <h1 class="name">Shunya Yamamoto</h1>
+      </div>
+      <div class="links">
+        <router-link to="/" class="link" exact-active-class="active">自己紹介</router-link>
+        <router-link to="/seatApp" class="link" exact-active-class="active">制作物</router-link>
+      </div>
 
       <main>
         <router-view></router-view>
@@ -32,14 +23,31 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css";
 
-.test {
-  margin-top: 40px;
-  color: #eef9ff;
+.header {
+  height: 440px;
+  max-height: 440px;
+  background-image: url('https://images.unsplash.com/photo-1469735139965-2d27590468a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3264&q=80');
+  background-size: cover;
+  .name {
+    text-align: center;
+    line-height: 440px;
+    font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+    color: #454C50
+  }
 }
-v-toolbar {
-  color: #aad6ec;
+.links {
+  font-size: 20px;
+  text-align: center;
+  justify-content: space-between;
+  .link {
+    color: #454c50;
+    font-weight: bold;
+    font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+    margin-right: 10px;
+  }
 }
+
 </style>
