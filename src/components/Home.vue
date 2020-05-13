@@ -28,27 +28,25 @@
                      <p class="disc">  TOEIC L&Rテスト 780点 </p>
                      <br>
                      <p>学習言語:</p>
-                     <div class="language_card">
-                        <i class="devicon-ruby-plain-wordmark colored"></i>
-                        <p>Ruby</p>
-                     </div>
-                     <div class="language_card">
-                        <i class="devicon-rails-plain-wordmark colored"></i>
-                        <p>Ruby on rails</p>
-                     </div>
-                     <div class="language_card">
+
+                     <p class="disc">フロントエンド:</p>
+                     <div class="front">
+                        <div class="language_card">
                         <i class="devicon-html5-plain-wordmark colored"></i>
                         <p>HTML5</p>
+                        </div>
+                        <div class="language_card">
+                           <i class="devicon-css3-plain-wordmark colored"></i>
+                           <p>CSS</p>
+                        </div>
+                        <div class="language_card">
+                           <i class="devicon-sass-original colored"></i>
+                           <p>SASS</p>
+                        </div>
                      </div>
-                     <div class="language_card">
-                        <i class="devicon-css3-plain-wordmark colored"></i>
-                        <p>CSS</p>
-                     </div>
-                     <div class="language_card">
-                        <i class="devicon-sass-original colored"></i>
-                        <p>SASS</p>
-                     </div>
-                     <div class="language_card">
+
+                     <div class="front">
+                        <div class="language_card">
                         <i class="devicon-javascript-plain colored"></i>
                         <p>Javascript</p>
                      </div>
@@ -60,6 +58,24 @@
                         <i class="devicon-vuejs-plain-wordmark colored"></i>
                         <p>Vue.js</p>
                      </div>
+                     </div>
+
+                     <p class="disc">サーバーサイド:</p>
+                     <div class="side">
+                        <div class="language_card">
+                           <i class="devicon-ruby-plain-wordmark colored"></i>
+                           <p>Ruby</p>
+                        </div>
+                        <div class="language_card">
+                           <i class="devicon-rails-plain-wordmark colored"></i>
+                           <p>Ruby on rails</p>
+                        </div>
+                        <div class="language_card">
+                           <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                           <p>AWS</p>
+                        </div>
+                     </div>
+                     
                   </div>
                </div>
             </div>
@@ -88,6 +104,7 @@ export default {
    .user_image_desc {
       display: flex;
       margin-top: 40px;
+      margin-bottom: 100px;
       p {
          color: #677284;
       }
@@ -108,15 +125,33 @@ export default {
          .disc {
             margin-left: 20px;
          }
-         .language_card {
+         .front {
+            display: flex;
+            .language_card {
             display: flex;
             margin-left: 20px;
+            width: 200px;
             i {
                font-size: 50px;
             }
             p{
                line-height: 50px;
             }
+         }
+         }
+         .side {
+            display: flex;
+            .language_card {
+            display: flex;
+            margin-left: 20px;
+            width: 200px;
+            i {
+               font-size: 50px;
+            }
+            p{
+               line-height: 50px;
+            }
+         }
          }
       }
    }
