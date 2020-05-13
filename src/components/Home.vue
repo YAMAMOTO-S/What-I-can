@@ -26,13 +26,41 @@
                      <br>
                      <p>資格:</p>
                      <p class="disc">  TOEIC L&Rテスト 780点 </p>
+                     <br>
+                     <p>学習言語:</p>
+                     <div class="language_card">
+                        <i class="devicon-ruby-plain-wordmark colored"></i>
+                        <p>Ruby</p>
+                     </div>
+                     <div class="language_card">
+                        <i class="devicon-rails-plain-wordmark colored"></i>
+                        <p>Ruby on rails</p>
+                     </div>
+                     <div class="language_card">
+                        <i class="devicon-html5-plain-wordmark colored"></i>
+                        <p>HTML5</p>
+                     </div>
+                     <div class="language_card">
+                        <i class="devicon-css3-plain-wordmark colored"></i>
+                        <p>CSS</p>
+                     </div>
+                     <div class="language_card">
+                        <i class="devicon-sass-original colored"></i>
+                        <p>SASS</p>
+                     </div>
+                     <div class="language_card">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <p>Javascript</p>
+                     </div>
+                     <div class="language_card">
+                        <i class="devicon-jquery-plain-wordmark colored"></i>
+                        <p>jQuery</p>
+                     </div>
+                     <div class="language_card">
+                        <i class="devicon-vuejs-plain-wordmark colored"></i>
+                        <p>Vue.js</p>
+                     </div>
                   </div>
-               </div>
-            </div>
-            <div class="skill">
-               <p>学習言語</p>
-               <div class="language_card">
-                  <p><i class = "devicon-amazonwebservices-original "></i>aaa</p>
                </div>
             </div>
 
@@ -55,7 +83,7 @@ export default {
 
 .back {
    background-color: #EDF2F7;
-   height: 800px;
+   height: 100%;
 
    .user_image_desc {
       display: flex;
@@ -80,12 +108,17 @@ export default {
          .disc {
             margin-left: 20px;
          }
+         .language_card {
+            display: flex;
+            margin-left: 20px;
+            i {
+               font-size: 50px;
+            }
+            p{
+               line-height: 50px;
+            }
+         }
       }
-   }
-
-   .skill {
-      border-top: #677284 1px solid;
-      margin-top: 40px;
    }
 }
 </style>
