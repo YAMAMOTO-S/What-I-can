@@ -5,8 +5,8 @@
         <h1 class="name animated fadeIn">Shunya Yamamoto</h1>
       </div>
       <div class="links">
-        <router-link to="/" class="link">自己紹介</router-link>
-        <router-link to="/seatApp" class="link">制作物</router-link>
+        <router-link to="/" class="link"><v-icon>mdi-account</v-icon>自己紹介</router-link>
+        <router-link to="/seatApp" class="link"><v-icon>mdi-clipboard-text-outline</v-icon>制作物</router-link>
       </div>
 
       <main>
@@ -29,14 +29,14 @@ export default {
 .header {
   height: 440px;
   max-height: 440px;
-  background-image: url('https://images.unsplash.com/photo-1469735139965-2d27590468a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3264&q=80');
+  background-image: url('../src/assets/text.jpeg');
   background-size: contain;
   background-size: cover;
   .name {
     text-align: center;
     line-height: 440px;
     font-family: "ヒラギノ丸ゴ ProN",sans-serif;
-    color: white
+    color: #454C50;
   }
 }
 .links {

@@ -29,9 +29,12 @@
                   </div>
                </div>
             </div>
-               <div class="why">
-                  <p>学習を始めたきっかけ</p>
+            <div class="skill">
+               <p>学習言語</p>
+               <div class="language_card">
+                  <p><i class = "devicon-amazonwebservices-original "></i>aaa</p>
                </div>
+            </div>
 
          </div>
 
@@ -48,14 +51,18 @@ export default {
 
 <style scoped lang="scss">
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/devicon/2.2/devicon.min.css";
 
 .back {
-   background-color: #F5F5F5;
+   background-color: #EDF2F7;
    height: 800px;
 
    .user_image_desc {
       display: flex;
       margin-top: 40px;
+      p {
+         color: #677284;
+      }
       .user_image {
          width: 400px;
          text-align: center;
@@ -74,6 +81,11 @@ export default {
             margin-left: 20px;
          }
       }
+   }
+
+   .skill {
+      border-top: #677284 1px solid;
+      margin-top: 40px;
    }
 }
 </style>
