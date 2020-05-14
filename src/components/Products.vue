@@ -1,60 +1,112 @@
 <template>
-  <v-container>
-    <v-row align="center" justify="center" class="animated fadeIn">
-      <v-col cols="10" class="d-lg-flex " align="center" justify="center"
-        >
-      <v-col
-        cols="4"
-        md="12"
-        lg="4"
-        xl="4"
-        align="center"
-        justify="center"
-      >
-        <SeatApp />
-      </v-col>
-      <v-col
-        cols="4"
-        md="12"
-        lg="4"
-        xl="4"        
-        align="center"
-        justify="center"
-      >
-        <Exchange />
-      </v-col>
-      <v-col
-        cols="4"
-        md="12"
-        lg="4"
-        xl="4"        
-        align="center"
-        justify="center"
-      >
-        <ArrayMethods />
-      </v-col>
-      </v-col>
-    </v-row>
+  <div class="back">
+    <v-container>
+      <div class="content animated fadeIn">
+        <div class="product_card">
+          <v-col cols="6">
+            <div class="left">
+              <div class="recome1">
+                <v-img src="../assets/recome1.png" aspect-ratio="2"></v-img>
+              </div>
+              <div class="recome1">
+                <v-img src="../assets/recome2.png" aspect-ratio="2"></v-img>
+              </div>
+            </div>
+          </v-col>
 
-    <v-row  align="center" justify="center" class="animated fadeIn"> 
-      <v-col cols="12" md="10" lg="12" xl="12">
-        <Meal />
-      </v-col>
-    </v-row>
-  </v-container>
+          <v-col cols="6">
+            <div class="right">
+              <div class="title">
+                <p>Recommen</p>
+                <v-btn icon>
+                  <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                      <i class="devicon-github-plain colored"></i>
+                  </a>
+                </v-btn>
+              </div>
+              <div class="gaiyou">
+                <p class="head">アプリ概要</p>
+                <p class="disc">自分のとっておきを全力で紹介したり、探すことの出来るアプリです。</p>
+              </div>
+              <div class="gizyutu">
+                <p class="head">使用技術</p>
+                <p class="disc">フロントエンド</p>
+                <p class="disc">HTML, Sass, JavaScript, JQuery</p>
+                <p class="disc">バックエンド</p>
+                <p class="disc">Ruby, Ruby on rails</p>
+                <p class="disc">本番環境</p>
+                <p class="disc">AWS(VPC, EC2, RDS, S3)</p>
+              </div>
+            </div>
+          </v-col>
+        </div>
+
+      </div>
+    </v-container>
+  </div>
 </template>
 
 <script>
-import SeatApp from "@/components/SeatApp";
-import Exchange from "@/components/Exchange";
-import ArrayMethods from "@/components/ArrayMethod";
-import Meal from "@/components/Meal";
-
 export default {
-  components: { SeatApp, Exchange, ArrayMethods, Meal }
+  name: "App",
+  computed: {}
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  .back {
+    background-color: #EDF2F7;
+    height: 100%;
+    .product_card {
+      margin-top: 50px;
+      border-top: 1px #677284 solid;
+      display: flex;
 
+      .left {
+        margin-top: 50px;
+      }
+
+      .right {
+        margin-top: 50px;
+        margin-left: 20px;
+        .title {
+          display: flex;
+          p {
+            font-size: 25px;
+            font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+            color: #454c50;
+          }
+          a {
+            font-size: 25px;
+            text-decoration: none;
+          }
+        }
+        .gaiyou {
+          .head {
+            font-weight: bold;
+            font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+            color: #454c50;
+          }
+          p {
+            font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+            color: #677284;
+          }
+        }
+        .gizyutu {
+          .head {
+            font-weight: bold;
+            font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+            color: #454c50;
+          }
+          p {
+            font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+            color: #677284;
+          }
+        }
+      }
+    }
+    .disc {
+      margin-left: 15px;
+    }   
+  }
 </style>

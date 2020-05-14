@@ -5,8 +5,12 @@
         <h1 class="name animated fadeIn">Shunya Yamamoto</h1>
       </div>
       <div class="links">
-        <router-link to="/" class="link"><v-icon>mdi-account</v-icon>自己紹介</router-link>
-        <router-link to="/seatApp" class="link"><v-icon>mdi-clipboard-text-outline</v-icon>制作物</router-link>
+        <router-link to="/" class="link">
+          <v-icon>mdi-account</v-icon>自己紹介
+        </router-link>
+        <router-link to="/products" class="link">
+          <v-icon>mdi-clipboard-text-outline</v-icon>制作物
+        </router-link>
       </div>
 
       <main>
@@ -18,7 +22,7 @@
 
 <script>
 export default {
-  name: "App", 
+  name: "App",
   computed: {}
 };
 </script>
@@ -29,7 +33,7 @@ export default {
 .header {
   height: 480px;
   max-height: 480px;
-  background-image: url('../src/assets/text.jpeg');
+  background-image: url("../src/assets/text.jpeg");
   background-size: contain;
   background-size: cover;
   .name {
@@ -37,7 +41,7 @@ export default {
     line-height: 480px;
     font-family: "Hiragino Sans", "Meiryo", "sans-serif";
     font-weight: bold;
-    color: #454C50;
+    color: #454c50;
   }
 }
 .links {
@@ -48,16 +52,15 @@ export default {
   max-height: 200px;
   width: 100%;
   .link {
-    color: #6E777C;
-    font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+    color: #6e777c;
+    font-family: "ヒラギノ丸ゴ ProN", sans-serif;
     margin-right: 30px;
     text-decoration: none;
     line-height: 200px;
   }
-  .router-link-exact-active{
-    color: #454C50;
-    border-bottom: #454C50 1px solid;
+  .router-link-exact-active {
+    color: #454c50;
+    border-bottom: #454c50 1px solid;
   }
 }
-
 </style>
