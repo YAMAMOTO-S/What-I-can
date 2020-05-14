@@ -7,7 +7,7 @@
           <v-col cols="6">
             <div class="left">
               <div class="recome1">
-                <v-img src="../assets/recome1.png" aspect-ratio="2"></v-img>
+                <v-img src="../assets/recome1.png" aspect-ratio="2" class="image1"></v-img>
               </div>
               <div class="recome1">
                 <v-img src="../assets/recome2.png" aspect-ratio="2"></v-img>
@@ -48,11 +48,11 @@
         </div>
 
 <!-- Geo-App -->
-                <div class="product_card">
+        <div class="product_card">
           <v-col cols="6">
             <div class="left">
               <div class="recome1">
-                <v-img src="../assets/geo1.png" aspect-ratio="2"></v-img>
+                <v-img src="../assets/geo1.png" aspect-ratio="2" class="image1"></v-img>
               </div>
               <div class="recome1">
                 <v-img src="../assets/geo2.png" aspect-ratio="2"></v-img>
@@ -94,6 +94,99 @@
           </v-col>
         </div>
 
+<!-- ここからFURIMA -->
+        <div class="product_card">
+          <v-col cols="6">
+            <div class="left">
+              <div class="recome1">
+                <v-img src="../assets/hurima1.jpeg" aspect-ratio="2" class="image1"></v-img>
+              </div>
+              <div class="recome1">
+                <v-img src="../assets/hurima2.png" aspect-ratio="2"></v-img>
+              </div>
+            </div>
+          </v-col>
+
+          <v-col cols="6">
+            <div class="right">
+              <div class="title">
+                <p>FURIMA</p>
+                <v-btn icon>
+                  <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                      <i class="devicon-github-plain colored"></i>
+                  </a>
+                </v-btn>
+              </div>
+              <div class="gaiyou">
+                <p class="head">アプリ概要</p>
+                <p class="disc">TechExpert(現TechCamp)での学習において作成したフリマアプリです。<br>5人でチームを組み、アジャイル開発(スクラム)で開発を進めました。初めの1週間はオフラインで集まり開発をしていましたが、新型コロナウイルスでそれ以降は完全リモートでの作業となりました。ローカルとリーモートと両方経験できたは良い経験になりました。</p>
+              </div>
+              <div class="gizyutu">
+                <p class="head">使用技術</p>
+                <p class="disc">フロントエンド</p>
+                <p class="disc">Haml, Sass, JavaScript, JQuery</p>
+                <p class="disc">バックエンド</p>
+                <p class="disc">Ruby, Ruby on rails</p>
+                <p class="disc">本番環境</p>
+                <p class="disc">AWS(VPC, EC2, S3)</p>
+              </div>
+              <div class="btn">
+                <router-link to="/" class="link">
+                  詳しく見る
+                </router-link>
+              </div>
+            </div>
+          </v-col>
+        </div>
+
+<!-- ここからportfolio -->
+        <div class="product_card">
+          <v-col cols="6">
+            <div class="left">
+              <div class="recome1">
+                <v-img src="../assets/port1.png" aspect-ratio="2" class="image1"></v-img>
+              </div>
+              <div class="recome1">
+                <v-img src="../assets/port2.png" aspect-ratio="2"></v-img>
+              </div>
+            </div>
+          </v-col>
+
+          <v-col cols="6">
+            <div class="right">
+              <div class="title">
+                <p>Portfolio</p>
+                <v-btn icon>
+                  <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                      <i class="devicon-github-plain colored"></i>
+                  </a>
+                </v-btn>
+              </div>
+              <div class="gaiyou">
+                <p class="head">アプリ概要</p>
+                <p class="disc">ご覧いただいているポートフォリオサイトです。
+                  <br>Vue.jsのVueRouter を使用してSPA化しています。
+                  <br>なるべく堅い雰囲気にならないように、しかし緩すぎるのは駄目とデザインが一番難しかったです。
+                </p>
+              </div>
+              <div class="gizyutu">
+                <p class="head">使用技術</p>
+                <p class="disc">フロントエンド</p>
+                <p class="disc">HTML, Javascript, Vue.js</p>
+                <p class="disc">バックエンド, データベース</p>
+                <p class="disc">Firebase Database</p>
+                <p class="disc">本番環境</p>
+                <p class="disc">Firebase Hosting</p>
+              </div>
+              <div class="btn">
+                <router-link to="/" class="link">
+                  詳しく見る
+                </router-link>
+              </div>
+            </div>
+          </v-col>
+        </div>
+
       </div>
     </v-container>
   </div>
@@ -109,7 +202,7 @@ export default {
 <style scoped lang="scss">
   .back {
     background-color: #EDF2F7;
-    height: 100%;
+    height: 3000px;
     .product_card {
       margin-top: 50px;
       border-top: 1px #677284 solid;
@@ -117,6 +210,9 @@ export default {
 
       .left {
         margin-top: 50px;
+        .image1 {
+          margin-bottom: 30px;
+        } 
       }
 
       .right {
@@ -161,6 +257,7 @@ export default {
           display:inline-block;
           background-color: #677284;
           border-radius: 20px;
+          margin-top: 10px;
           a {
             color: #EDF2F7;
             text-decoration: none;
