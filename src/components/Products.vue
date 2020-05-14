@@ -37,6 +37,11 @@
                 <p class="disc">本番環境</p>
                 <p class="disc">AWS(VPC, EC2, RDS, S3)</p>
               </div>
+              <div class="btn">
+                <router-link to="/" class="link">
+                  詳しく見る
+                </router-link>
+              </div>
             </div>
           </v-col>
         </div>
@@ -103,6 +108,19 @@ export default {
             color: #677284;
           }
         }
+        .btn {
+          border: 1px white solid;
+          display:inline-block;
+          background-color: #677284;
+          border-radius: 20px;
+          margin-top: 50px;
+          a {
+            color: #EDF2F7;
+            text-decoration: none;
+            padding: 10px;
+          }
+        }
+
       }
     }
     .disc {
