@@ -2,6 +2,7 @@
   <div class="back">
     <v-container>
       <div class="content animated fadeIn">
+
         <div class="product_card">
           <v-col cols="6">
             <div class="left">
@@ -26,7 +27,7 @@
               </div>
               <div class="gaiyou">
                 <p class="head">アプリ概要</p>
-                <p class="disc">自分のとっておきを全力で紹介したり、探すことの出来るアプリです。</p>
+                <p class="disc">自分のとっておきを全力で紹介したり、探すことの出来るアプリです。<br>様々な投稿サイトで皆さん自分のオススメの物を紹介しているが、それに特化したサイトが無かったので、ジャンルを決めずに商品を探すのが非常に難しかった。なのでオススメする事に特化したサイトを作れば商品と出会いやすくなり、ユーザーの生活の質が向上すると考えたので作成しました。</p>
               </div>
               <div class="gizyutu">
                 <p class="head">使用技術</p>
@@ -36,6 +37,53 @@
                 <p class="disc">Ruby, Ruby on rails</p>
                 <p class="disc">本番環境</p>
                 <p class="disc">AWS(VPC, EC2, RDS, S3)</p>
+              </div>
+              <div class="btn">
+                <router-link to="/" class="link">
+                  詳しく見る
+                </router-link>
+              </div>
+            </div>
+          </v-col>
+        </div>
+
+<!-- Geo-App -->
+                <div class="product_card">
+          <v-col cols="6">
+            <div class="left">
+              <div class="recome1">
+                <v-img src="../assets/geo1.png" aspect-ratio="2"></v-img>
+              </div>
+              <div class="recome1">
+                <v-img src="../assets/geo2.png" aspect-ratio="2"></v-img>
+              </div>
+            </div>
+          </v-col>
+
+          <v-col cols="6">
+            <div class="right">
+              <div class="title">
+                <p>Geo-App</p>
+                <v-btn icon>
+                  <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                      <i class="devicon-github-plain colored"></i>
+                  </a>
+                </v-btn>
+              </div>
+              <div class="gaiyou">
+                <p class="head">アプリ概要</p>
+                <p class="disc">Google Map API を利用したユーザーの位置の表示と、マイページでの非同期チャットが可能。なSPAです。
+                  <br>ここ数年勢いが出てきたVue.js とFirebase が個人的に興味があり勉強の為に作成しました。
+                    またAPI を使用してみたかったのでGoogle Map API を使用しました。</p>
+              </div>
+              <div class="gizyutu">
+                <p class="head">使用技術</p>
+                <p class="disc">フロントエンド</p>
+                <p class="disc">HTML, Javascript, Vue.js</p>
+                <p class="disc">バックエンド, データベース</p>
+                <p class="disc">Firebase Database</p>
+                <p class="disc">本番環境</p>
+                <p class="disc">Firebase Hosting</p>
               </div>
               <div class="btn">
                 <router-link to="/" class="link">
@@ -113,7 +161,6 @@ export default {
           display:inline-block;
           background-color: #677284;
           border-radius: 20px;
-          margin-top: 50px;
           a {
             color: #EDF2F7;
             text-decoration: none;
@@ -125,6 +172,6 @@ export default {
     }
     .disc {
       margin-left: 15px;
-    }   
+    }
   }
 </style>
