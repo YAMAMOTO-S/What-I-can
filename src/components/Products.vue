@@ -6,12 +6,16 @@
         <div class="product_card">
           <v-col cols="6">
             <div class="left">
-              <div class="recome1">
-                <v-img src="../assets/recome1.png" aspect-ratio="2" class="image1"></v-img>
-              </div>
-              <div class="recome1">
-                <v-img src="../assets/recome2.png" aspect-ratio="2"></v-img>
-              </div>
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/recome1.png" aspect-ratio="2" class="image1"></v-img>
+                </div>
+              </v-card>
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/recome2.png" aspect-ratio="2"></v-img>
+                </div>
+              </v-card>
             </div>
           </v-col>
 
@@ -51,12 +55,16 @@
         <div class="product_card">
           <v-col cols="6">
             <div class="left">
-              <div class="recome1">
-                <v-img src="../assets/geo1.png" aspect-ratio="2" class="image1"></v-img>
-              </div>
-              <div class="recome1">
-                <v-img src="../assets/geo2.png" aspect-ratio="2"></v-img>
-              </div>
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/geo1.png" aspect-ratio="2" class="image1"></v-img>
+                </div>
+              </v-card>
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/geo2.png" aspect-ratio="2"></v-img>
+                </div>
+              </v-card>
             </div>
           </v-col>
 
@@ -98,12 +106,16 @@
         <div class="product_card">
           <v-col cols="6">
             <div class="left">
-              <div class="recome1">
-                <v-img src="../assets/hurima1.jpeg" aspect-ratio="2" class="image1"></v-img>
-              </div>
-              <div class="recome1">
-                <v-img src="../assets/hurima2.png" aspect-ratio="2"></v-img>
-              </div>
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/hurima1.jpeg" aspect-ratio="2" class="image1"></v-img>
+                </div>
+              </v-card>
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/hurima2.png" aspect-ratio="2"></v-img>
+                </div>
+              </v-card>
             </div>
           </v-col>
 
@@ -143,12 +155,16 @@
         <div class="product_card">
           <v-col cols="6">
             <div class="left">
-              <div class="recome1">
-                <v-img src="../assets/port1.png" aspect-ratio="2" class="image1"></v-img>
-              </div>
-              <div class="recome1">
-                <v-img src="../assets/port2.png" aspect-ratio="2"></v-img>
-              </div>
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/port1.png" aspect-ratio="2" class="image1"></v-img>
+                </div>
+              </v-card>
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/port2.png" aspect-ratio="2"></v-img>
+                </div>
+              </v-card>
             </div>
           </v-col>
 
