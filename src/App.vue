@@ -27,15 +27,16 @@ export default {
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css";
 
 .header {
-  height: 440px;
-  max-height: 440px;
+  height: 480px;
+  max-height: 480px;
   background-image: url('../src/assets/text.jpeg');
   background-size: contain;
   background-size: cover;
   .name {
     text-align: center;
-    line-height: 440px;
-    font-family: "ヒラギノ丸ゴ ProN",sans-serif;
+    line-height: 480px;
+    font-family: "Hiragino Sans", "Meiryo", "sans-serif";
+    font-weight: bold;
     color: #454C50;
   }
 }

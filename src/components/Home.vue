@@ -6,6 +6,19 @@
             <div class="user_image_desc">
                <div class="user_image">
                   <img src="@/assets/web.jpg">
+
+                  <div class="twitter">
+                     <v-btn icon>
+                        <a href="https://twitter.com/home" target=”_blank”>
+                           <i class="devicon-twitter-plain colored"></i>
+                        </a>
+                     </v-btn>
+                     <v-btn icon>
+                        <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                           <i class="devicon-github-plain colored"></i>
+                        </a>
+                     </v-btn>
+                  </div>
                </div>
 
                <div class="user_desc">
@@ -14,7 +27,7 @@
                      <br>
                      <p>年齢: 23</p>
                      <br>
-                     <p>所在地: 京都</p>
+                     <p>所在地: 京都市</p>
                      <br>
                      <p>学歴:</p>
                      <p class="disc">  2016.04.01 佛教大学 文学部 英米学科入学</p>
@@ -117,6 +130,15 @@ export default {
             height: 300px;
             margin-top: 130px;
          }
+         .twitter {
+            margin-top: 5px;
+            i {
+               font-size: 25px;
+            }
+            a {
+               text-decoration: none;
+            }
+         }
       }
       .name {
          font-family: "ヒラギノ丸ゴ ProN",sans-serif;
@@ -127,6 +149,7 @@ export default {
          }
          .front {
             display: flex;
+            margin-left: 20px;
             .language_card {
             display: flex;
             margin-left: 20px;
@@ -141,6 +164,7 @@ export default {
          }
          .side {
             display: flex;
+            margin-left: 20px;
             .language_card {
             display: flex;
             margin-left: 20px;
