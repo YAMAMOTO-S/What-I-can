@@ -9,7 +9,7 @@
 
                   <div class="twitter">
                      <v-btn icon>
-                        <a href="https://twitter.com/home" target=”_blank”>
+                        <a href="https://twitter.com/CoGi_t" target=”_blank”>
                            <i class="devicon-twitter-plain colored"></i>
                         </a>
                      </v-btn>

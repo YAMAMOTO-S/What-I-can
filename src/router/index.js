@@ -20,8 +20,8 @@ const routes = [
     component: products,
   },
   {
-    path: "/exchange",
-    name: "exchange",
+    path: "/recommen",
+    name: "recommen",
     component: exchange,
   },
   {

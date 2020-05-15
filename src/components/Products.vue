@@ -22,9 +22,9 @@
           <v-col cols="6">
             <div class="right">
               <div class="title">
-                <p>Recommen</p>
+                <a href="http://18.181.11.87/" target=”_blank”><p>Recommen</p></a>
                 <v-btn icon>
-                  <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                  <a href="https://github.com/YAMAMOTO-S/Recommen" target=”_blank”>
                       <i class="devicon-github-plain colored"></i>
                   </a>
                 </v-btn>
@@ -71,9 +71,9 @@
           <v-col cols="6">
             <div class="right">
               <div class="title">
-                <p>Geo-App</p>
+                <a href="https://geo-app-60123.web.app/" target=”_blank”><p>Geo-App</p></a>
                 <v-btn icon>
-                  <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                  <a href="https://github.com/YAMAMOTO-S/Geo-App" target=”_blank”>
                       <i class="devicon-github-plain colored"></i>
                   </a>
                 </v-btn>
@@ -122,16 +122,17 @@
           <v-col cols="6">
             <div class="right">
               <div class="title">
-                <p>FURIMA</p>
+                <a href="http://54.64.129.213/" target=”_blank”><p>FURIMA</p></a>
                 <v-btn icon>
-                  <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                  <a href="https://github.com/YAMAMOTO-S/freemarket_sample_72e" target=”_blank”>
                       <i class="devicon-github-plain colored"></i>
                   </a>
                 </v-btn>
               </div>
               <div class="gaiyou">
                 <p class="head">アプリ概要</p>
-                <p class="disc">TechExpert(現TechCamp)での学習において作成したフリマアプリです。<br>5人でチームを組み、アジャイル開発(スクラム)で開発を進めました。初めの1週間はオフラインで集まり開発をしていましたが、新型コロナウイルスでそれ以降は完全リモートでの作業となりました。ローカルとリーモートと両方経験できたは良い経験になりました。</p>
+                <p class="disc">TechExpert(現TechCamp)での学習において作成したフリマアプリです。
+                  <br>5人でチームを組み、アジャイル開発(スクラム)で開発を進めました。初めの1週間はオフラインで集まり開発をしていましたが、新型コロナウイルスでそれ以降は完全リモートでの作業となりました。ローカルとリーモート、両方経験できたのは良い経験になりました。</p>
               </div>
               <div class="gizyutu">
                 <p class="head">使用技術</p>
@@ -173,7 +174,7 @@
               <div class="title">
                 <p>Portfolio</p>
                 <v-btn icon>
-                  <a href="https://github.com/YAMAMOTO-S" target=”_blank”>
+                  <a href="https://github.com/YAMAMOTO-S/What-I-can" target=”_blank”>
                       <i class="devicon-github-plain colored"></i>
                   </a>
                 </v-btn>
