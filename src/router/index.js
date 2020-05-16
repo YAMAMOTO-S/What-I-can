@@ -4,7 +4,7 @@ import Home from "@/components/Home";
 import products from "@/components/Products";
 import recommen from "@/components/Recommen";
 import GeoApp from "@/components/GeoApp";
-import Meal from "@/components/Meal";
+import FURIMA from "@/components/Furima";
 
 Vue.use(VueRouter);
 
@@ -30,9 +30,9 @@ const routes = [
     component: GeoApp,
   },
   {
-    path: "/meal",
-    name: "meal",
-    component: Meal,
+    path: "/furima",
+    name: "furima",
+    component: FURIMA,
   },
 ];
 
@@ -40,6 +40,9 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+  scrollBehavior () {
+    return { y: 500 }
+  }
 });
 
 export default router;

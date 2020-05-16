@@ -144,7 +144,7 @@
                 <p class="disc">AWS(VPC, EC2, S3)</p>
               </div>
               <div class="btn">
-                <router-link to="/" class="link">
+                <router-link to="/furima" class="link">
                   詳しく見る
                 </router-link>
               </div>
