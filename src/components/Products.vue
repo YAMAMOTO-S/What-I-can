@@ -94,7 +94,7 @@
                 <p class="disc">Firebase Hosting</p>
               </div>
               <div class="btn">
-                <router-link to="/" class="link">
+                <router-link to="/geo-app" class="link">
                   詳しく見る
                 </router-link>
               </div>

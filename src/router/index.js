@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "@/components/Home";
 import products from "@/components/Products";
 import recommen from "@/components/Recommen";
-import ArrayMethods from "@/components/ArrayMethod";
+import GeoApp from "@/components/GeoApp";
 import Meal from "@/components/Meal";
 
 Vue.use(VueRouter);
@@ -25,9 +25,9 @@ const routes = [
     component: recommen,
   },
   {
-    path: "/arraymethods",
-    name: "arraymethods",
-    component: ArrayMethods,
+    path: "/geo-app",
+    name: "geo-app",
+    component: GeoApp,
   },
   {
     path: "/meal",
