@@ -23,6 +23,39 @@
           <p>人が本当にオススメするものを、ジャンル問わず閲覧するサイトがなかったので作成しました。</p>
           <p><v-icon>mdi-calendar</v-icon> | 2020/05 ~</p>
         </div>
+
+        <div class="gaiyou">
+          <p class="head">概要</p>
+          <p class="desc">自分のとっておきを全力で紹介したり、探すことの出来るアプリです。</p>
+        </div>
+        <div class="why">
+          <p class="head">なぜ作成したか？</p>
+          <p class="desc">様々な投稿サイトでユーザー同士が自分のオススメの物を紹介しているが、<br>それに特化したサイトが無かったので、ジャンルを決めない状態で商品を探すのが非常に難しかった。<br>なのでオススメする事に特化したサイトを作れば商品と出会いやすくなり、ユーザーの生活の質が向上すると考えたから。</p>
+        </div>
+        <div class="gizyutu">
+          <p class="head">使用技術一覧</p>
+          <p class="desc">フロントエンド<br>
+            ・HTML, Sass, JavaScript, JQuery<br>
+            バックエンド<br>
+            ・Ruby, Ruby on rails<br>
+            本番環境<br>
+            ・AWS(VPC, EC2, RDS, S3)
+          </p>
+        </div>
+        <div class="kinou">
+          <p class="head">機能一覧</p>
+          <p class="desc">・ユーザー登録, ログイン, ログアウト, ユーザーの編集機能(devise使用)<br>
+          ・記事投稿, 編集, 削除, 詳細表示機能<br>
+          ・S3への画像アップロード機能(carrierwave使用)<br>
+          ・記事のプレビュー機能<br>
+          ・いいね機能(非同期)<br>
+          ・コメント機能<br>
+          ・カテゴリー登録, 編集, 削除機能<br>
+          ・カテゴリー検索機能<br>
+          ・フォロー, フォロワー機能<br>
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
@@ -62,14 +95,16 @@ export default {
         font-weight: bold;
         font-size: 35px;
       }
+      .desc {
+        font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+          color: #677284;
+      }
       .btn {
         margin-top: 50px;
         a {
           font-size: 30px;
           text-decoration: none;
           margin-left: 50px;
-        }
-        p {
         }
       }
       .overview {
@@ -87,6 +122,19 @@ export default {
           font-family: "ヒラギノ丸ゴ ProN", sans-serif;
           color: #677284;
         }
+      }
+      .gaiyou {
+        margin-top: 100px;
+      }
+      .why {
+        margin-top: 100px;
+      }
+      .gizyutu {
+        margin-top: 100px;
+      }
+      .kinou {
+        margin-top: 100px;
+        margin-bottom: 100px;
       }
     }
   }
