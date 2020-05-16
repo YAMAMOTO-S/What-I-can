@@ -43,7 +43,7 @@
                 <p class="disc">AWS(VPC, EC2, RDS, S3)</p>
               </div>
               <div class="btn">
-                <router-link to="/" class="link">
+                <router-link to="/recommen" class="link">
                   詳しく見る
                 </router-link>
               </div>

@@ -27,7 +27,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css";
 
 .header {

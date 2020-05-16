@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/components/Home";
 import products from "@/components/Products";
-import exchange from "@/components/Exchange";
+import recommen from "@/components/Recommen";
 import ArrayMethods from "@/components/ArrayMethod";
 import Meal from "@/components/Meal";
 
@@ -22,7 +22,7 @@ const routes = [
   {
     path: "/recommen",
     name: "recommen",
-    component: exchange,
+    component: recommen,
   },
   {
     path: "/arraymethods",
