@@ -8,10 +8,10 @@
       </div>
     </div>
 
-    <div class="back2">
+    <div class="back2 animated fadeIn">
       <div class="block">
         <div style="display: flex;">
-          <h2 class="head">Recommen</h2>
+          <a href="http://18.181.11.87/" target=”_blank”><h2 class="head">Recommen</h2></a>
           <v-btn icon class="btn">
               <a href="https://github.com/YAMAMOTO-S/Recommen" target=”_blank”>
                   <i class="devicon-github-plain colored"></i>
@@ -20,8 +20,16 @@
         </div>
         <div class="overview">
           <div><p class="overtitle">overview</p></div>
+          <br>
           <p>人が本当にオススメするものを、ジャンル問わず閲覧するサイトがなかったので作成しました。</p>
+          <br>
+          <p>Github:<a href="https://github.com/YAMAMOTO-S/Recommen"> https://github.com/YAMAMOTO-S/Recommen</a></p>
+          <p>サイトURL:<a href="http://18.181.11.87/"> http://18.181.11.87/</a></p>
           <p><v-icon>mdi-calendar</v-icon> | 2020/05 ~</p>
+        </div>
+        <div class="user">
+          <p class="usertitle">ユーザー情報</p>
+          <p class="desc">test@gmail.com<br>123456</p>
         </div>
 
         <div class="gaiyou">
@@ -99,6 +107,9 @@ export default {
         font-family: "ヒラギノ丸ゴ ProN", sans-serif;
           color: #677284;
       }
+      a {
+        text-decoration: none;
+      }
       .btn {
         margin-top: 50px;
         a {
@@ -135,6 +146,18 @@ export default {
       .kinou {
         margin-top: 100px;
         margin-bottom: 100px;
+      }
+      .user {
+        border: 1px #677284 solid;
+        border-radius: 10px;
+        padding: 30px;
+        margin-top: 20px;
+        .usertitle {
+          font-weight: bold;
+          font-family: "ヒラギノ丸ゴ ProN", sans-serif;
+          color: #454c50;
+          font-size: 20px;
+        }
       }
     }
   }

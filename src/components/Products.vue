@@ -276,7 +276,7 @@ export default {
           border-radius: 20px;
           margin-top: 10px;
           a {
-            color: #EDF2F7;
+            color: white;
             text-decoration: none;
             padding: 10px;
           }
