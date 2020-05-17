@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 <template>
+<div class="back">
   <v-container fluid>
-    <v-row align="center" justify="center">
+    <v-row align="center" justify="center" class="animated fadeIn">
       <v-col cols="12" md="11" lg="10" xl="10">
         <v-card class="card">
           <br />
@@ -37,6 +38,7 @@
       </v-col>
     </v-row>
   </v-container>
+</div>
 </template>
 
 <script>
@@ -113,6 +115,14 @@ export default {
 </script>
 
 <style scoped>
+.back {
+  background-color: #EDF2F7;
+  height: 1000px;
+}
+.card {
+  margin-top: 40px;
+}
+
 .mainimg {
   max-width: 150px;
   margin: 10px auto;

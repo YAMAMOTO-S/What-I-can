@@ -152,6 +152,44 @@
           </v-col>
         </div>
 
+<!-- ここからmeal -->
+        <div class="product_card">
+          <v-col cols="6">
+            <div class="left">
+              <v-card>
+                <div class="recome1">
+                  <v-img src="../assets/meal1.png" aspect-ratio="2" class="image1"></v-img>
+                </div>
+              </v-card>
+            </div>
+          </v-col>
+
+          <v-col cols="6">
+            <div class="right">
+              <div class="title">
+                <p>MealFinder</p>
+              </div>
+              <div class="gaiyou">
+                <p class="head">アプリ概要</p>
+                <p class="disc">
+                  Meal APIを使用して料理名(英語)で検索すると料理を表示するというもの。<br>
+                  どうも自分はライブラリに頼りすぎていると感じたので、素のJavascriptを学習するためにアウトプットの一つとして作成しました。<br>
+                </p>
+              </div>
+              <div class="gizyutu">
+                <p class="head">使用技術</p>
+                <p class="disc">HTML, css, Javascript</p>
+              </div>
+              <div class="btn">
+                <router-link to="/meal" class="link">
+                  詳しく見る
+                </router-link>
+              </div>
+            </div>
+          </v-col>
+        </div>
+
+
 <!-- ここからportfolio -->
         <div class="product_card">
           <v-col cols="6">
@@ -219,7 +257,7 @@ export default {
 <style scoped lang="scss">
   .back {
     background-color: #EDF2F7;
-    height: 3000px;
+    height: 3500px;
     .product_card {
       margin-top: 50px;
       border-top: 1px #677284 solid;
