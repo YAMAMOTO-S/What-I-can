@@ -23,8 +23,8 @@
           <br>
           <p>人が本当にオススメするものを、ジャンル問わず閲覧するサイトがなかったので作成しました。</p>
           <br>
-          <p>Github:<a href="https://github.com/YAMAMOTO-S/Recommen"> https://github.com/YAMAMOTO-S/Recommen</a></p>
-          <p>サイトURL:<a href="http://18.181.11.87/"> http://18.181.11.87/</a></p>
+          <p>Github:<a href="https://github.com/YAMAMOTO-S/Recommen" target=”_blank”> https://github.com/YAMAMOTO-S/Recommen</a></p>
+          <p>サイトURL:<a href="http://18.181.11.87/" target=”_blank”> http://18.181.11.87/</a></p>
           <p><v-icon>mdi-calendar</v-icon> | 2020/05 ~</p>
         </div>
         <div class="user">

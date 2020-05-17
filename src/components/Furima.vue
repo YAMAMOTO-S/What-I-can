@@ -11,9 +11,9 @@
     <div class="back2 animated fadeIn">
       <div class="block">
         <div style="display: flex;">
-          <a href="http://18.181.11.87/" target=”_blank”><h2 class="head">FURIMA</h2></a>
+          <a href="http://54.64.129.213/" target=”_blank”><h2 class="head">FURIMA</h2></a>
           <v-btn icon class="btn">
-              <a href="https://github.com/YAMAMOTO-S/Recommen" target=”_blank”>
+              <a href="https://github.com/YAMAMOTO-S/freemarket_sample_72e" target=”_blank”>
                   <i class="devicon-github-plain colored"></i>
               </a>
             </v-btn>
@@ -21,46 +21,55 @@
         <div class="overview">
           <div><p class="overtitle">overview</p></div>
           <br>
-          <p>人が本当にオススメするものを、ジャンル問わず閲覧するサイトがなかったので作成しました。</p>
+          <p>TechExpert(現TechCamp)での学習において作成したフリマアプリです。
+                  <br>5人でチームを組み、アジャイル開発(スクラム)で開発を進めました。初めの1週間はオフラインで集まり開発をしていましたが、新型コロナウイルスでそれ以降は完全リモートでの作業となりました。ローカルとリーモート、両方経験できたのは良い経験になりました。</p>
           <br>
-          <p>Github:<a href="https://github.com/YAMAMOTO-S/Recommen"> https://github.com/YAMAMOTO-S/Recommen</a></p>
-          <p>サイトURL:<a href="http://18.181.11.87/"> http://18.181.11.87/</a></p>
-          <p><v-icon>mdi-calendar</v-icon> | 2020/05 ~</p>
+          <p>Github:<a href="https://github.com/YAMAMOTO-S/freemarket_sample_72e" target=”_blank”> https://github.com/YAMAMOTO-S/freemarket_sample_72e</a></p>
+          <p>サイトURL:<a href="http://54.64.129.213/" target=”_blank”> http://54.64.129.213/</a></p>
+          <p><v-icon>mdi-calendar</v-icon> | 2020/04 ~</p>
         </div>
         <div class="user">
           <p class="usertitle">ユーザー情報</p>
-          <p class="desc">test@gmail.com<br>123456</p>
+          <p class="desc">hoge<br>1234</p>
         </div>
 
         <div class="gaiyou">
           <p class="head">概要</p>
-          <p class="desc">自分のとっておきを全力で紹介したり、探すことの出来るアプリです。</p>
+          <p class="desc">TechExpert(現TechCamp)での学習において作成したフリマアプリです。
+                  <br>5人でチームを組み、アジャイル開発(スクラム)で開発を進めました。初めの1週間はオフラインで集まり開発をしていましたが、新型コロナウイルスでそれ以降は完全リモートでの作業となりました。ローカルとリーモート、両方経験できたのは良い経験になりました。</p>
         </div>
+        
         <div class="why">
-          <p class="head">なぜ作成したか？</p>
-          <p class="desc">様々な投稿サイトでユーザー同士が自分のオススメの物を紹介しているが、<br>それに特化したサイトが無かったので、ジャンルを決めない状態で商品を探すのが非常に難しかった。<br>なのでオススメする事に特化したサイトを作れば商品と出会いやすくなり、ユーザーの生活の質が向上すると考えたから。</p>
+          <p class="head">担当箇所</p>
+          <p class="desc">
+            ・DB設計<br>
+            ・ウィザード形式でのユーザー登録、ログイン機能(バックエンド)<br>
+            ・ユーザー登録ページ（フロントエンド）<br>
+            ・商品出品機能（バックエンド）<br>
+            ・商品情報編集機能（バックエンド）<br>
+            ・デプロイ時のエラー解消<br>
+          </p>
         </div>
+
         <div class="gizyutu">
           <p class="head">使用技術一覧</p>
           <p class="desc">フロントエンド<br>
-            ・HTML, Sass, JavaScript, JQuery<br>
+            ・Haml, Sass, JavaScript, JQuery<br>
             バックエンド<br>
             ・Ruby, Ruby on rails<br>
             本番環境<br>
-            ・AWS(VPC, EC2, RDS, S3)
+            ・AWS(VPC, EC2, S3)
           </p>
         </div>
         <div class="kinou">
           <p class="head">機能一覧</p>
           <p class="desc">・ユーザー登録, ログイン, ログアウト, ユーザーの編集機能(devise使用)<br>
-          ・記事投稿, 編集, 削除, 詳細表示機能<br>
+          ・商品出品, 編集, 削除, 詳細表示機能<br>
           ・S3への画像アップロード機能(carrierwave使用)<br>
-          ・記事のプレビュー機能<br>
           ・いいね機能(非同期)<br>
           ・コメント機能<br>
-          ・カテゴリー登録, 編集, 削除機能<br>
-          ・カテゴリー検索機能<br>
-          ・フォロー, フォロワー機能<br>
+          ・多階層カテゴリー登録, 編集, 削除機能<br>
+          ・クレジットカードの登録、削除、購入機能
           </p>
         </div>
 

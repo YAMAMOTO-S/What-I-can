@@ -24,8 +24,8 @@
           <p>ここ数年勢いが出てきたVue.js とFirebase を個人的に興味があり勉強の為に作成しました。<br>
             Google Map API を利用したユーザーの位置の表示と、マイページでの非同期チャットが可能です。</p>
           <br>
-          <p>Github:<a href="https://github.com/YAMAMOTO-S/Geo-App"> https://github.com/YAMAMOTO-S/Geo-App</a></p>
-          <p>サイトURL:<a href="https://geo-app-60123.web.app/"> https://geo-app-60123.web.app/</a></p>
+          <p>Github:<a href="https://github.com/YAMAMOTO-S/Geo-App" target=”_blank”> https://github.com/YAMAMOTO-S/Geo-App</a></p>
+          <p>サイトURL:<a href="https://geo-app-60123.web.app/" target=”_blank”> https://geo-app-60123.web.app/</a></p>
           <p><v-icon>mdi-calendar</v-icon> | 2019/10 ~</p>
         </div>
         <div class="user">
