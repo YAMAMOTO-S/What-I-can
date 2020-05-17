@@ -257,7 +257,7 @@ export default {
 <style scoped lang="scss">
   .back {
     background-color: #EDF2F7;
-    height: 3500px;
+    height: 100%;
     .product_card {
       margin-top: 50px;
       border-top: 1px #677284 solid;
