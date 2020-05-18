@@ -262,9 +262,12 @@ export default {
       margin-top: 50px;
       border-top: 1px #677284 solid;
       display: flex;
+      width: 900px;
+      max-width: 850px;
+      margin: 0 auto;
 
       .left {
-        margin-top: 50px;
+        margin-top: 100px;
         .image1 {
           margin-bottom: 30px;
         } 
@@ -313,6 +316,7 @@ export default {
           background-color: #677284;
           border-radius: 20px;
           margin-top: 10px;
+          margin-bottom: 50px;
           a {
             color: white;
             text-decoration: none;

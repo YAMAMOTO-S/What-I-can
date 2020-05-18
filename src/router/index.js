@@ -5,7 +5,8 @@ import products from "@/components/Products";
 import recommen from "@/components/Recommen";
 import GeoApp from "@/components/GeoApp";
 import FURIMA from "@/components/Furima";
-import meal from "@/components/meal"
+import meal from "@/components/meal";
+import pros from "@/components/pros";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: "/meal",
     name: "meal",
     component: meal
+  },
+  {
+    path: '/pros',
+    name: "pros",
+    component: pros
   }
 ];
 
